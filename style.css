@@ -1,6 +1,6 @@
 body {
   font-family: sans-serif;
-  margin: 20px;
+  margin: 40px;
   font-size: 14px;
 }
 
@@ -18,7 +18,7 @@ body {
 .hide {
   position: absolute;
   display: none;
-  left: 1020px;
+  left: 820px;
   top: 175px;
   width: 180px;
 }
@@ -55,7 +55,7 @@ label {
 
 #vis-container {
   position: relative;
-  width: 1200px;
+  width: 1000px;
   height: 600px;
   margin-top: 10px;
 }
@@ -82,29 +82,29 @@ label {
 }
 
 #step1-left-annotation {
-  left: 225px;
-  top: 65px;
+  left: 190px;
+  top: 40px;
   width: 175px;
   text-align: center;
 }
 
 #step1-right-annotation {
-  left: 720px;
+  left: 545px;
   top: 5px;
   width: 160px;
   text-align: center;
 }
 
 #step2-center-annotation {
-  left: 280px;
-  top: 30px;
+  left: 160px;
+  top: 20px;
   width: 500px;
   text-align: center;
 }
 
 #step5-center-annotation {
-  left: 350px;
+  left: 280px;
   top: 50px;
-  width: 360px;
+  width: 300px;
   text-align: center;
 }
