@@ -1,6 +1,7 @@
 body {
   font-family: sans-serif;
   margin: 20px;
+  font-size: 14px;
 }
 
 .move {
@@ -81,29 +82,29 @@ label {
 }
 
 #step1-left-annotation {
-  left: 250px;
-  top: 50px;
+  left: 225px;
+  top: 65px;
   width: 175px;
   text-align: center;
 }
 
 #step1-right-annotation {
-  left: 700px;
-  top: 10px;
-  width: 175px;
+  left: 720px;
+  top: 5px;
+  width: 160px;
   text-align: center;
 }
 
 #step2-center-annotation {
-  left: 250px;
-  top: 10px;
-  width: 560px;
+  left: 280px;
+  top: 30px;
+  width: 500px;
   text-align: center;
 }
 
 #step5-center-annotation {
   left: 350px;
-  top: 20px;
+  top: 50px;
   width: 360px;
   text-align: center;
 }

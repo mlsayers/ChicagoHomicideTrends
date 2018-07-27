@@ -74,7 +74,7 @@ d3.csv("data.csv", function(d, i, columns) {
                            (height + 60) + ")")
       .attr("font-family", "sans-serif")
       .style("text-anchor", "middle")
-      .attr("font-size", 13)
+      .attr("font-size", 15)
       .text("Year");
 
   // Add y axis
@@ -89,14 +89,14 @@ d3.csv("data.csv", function(d, i, columns) {
       .attr("x", 0 - (height/2))
       .attr("dy", "1em")
       .attr("font-family", "sans-serif")
-      .attr("font-size", 13)
+      .attr("font-size", 15)
       .style("text-anchor", "middle")
       .text("Number of Reported Homicides");
 
   // Create labels for legend
   var legend = g.append("g")
       .attr("font-family", "sans-serif")
-      .attr("font-size", 10)
+      .attr("font-size", 12)
       .attr("text-anchor", "end")
     .selectAll("g")
     .data(keys.slice().reverse())

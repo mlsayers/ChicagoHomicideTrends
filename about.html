@@ -6,128 +6,60 @@
     body {
       font-family: sans-serif;
       margin: 20px;
+      font-size: 14px;
     }
   </style>
 </head>
 
 <html><body>
 
-  <a href = "index.html"><button>Return to Visualization</button></a>
+  <a href = "index.html"><button style = "font-size : 14px">Return to Visualization</button></a>
 
   <!--Title and Question-->
-  <h1>Chicago Homicide Trends</h1>
+  <h2>Chicago Homicide Trends</h1>
 
-  <h2>Overall</h2>
+  <h3>Overview</h2>
   <p>
-    This narrative visualization follows a martini glass structure.  It is
-    implemented on the publicly visible website, GitHub.  The URL for this
-    is ___.
-    Use the charts from your Midterm Project dashboard to create a narrative
-    visualization, using your knowledge of visual communication and narrative
-    structure, along with your skills at D3 programming in JavaScript. The
-    narrative visualization should be implemented on a publicly visible website,
-    such as Heroku. You will turn in this project by submitting the URL to the
-    narrative visualization for peer grading.
-  </p>
-  <p>
-    The narrative visualization should follow one of the three hybrid structures:
-    a martini glass, an interactive slideshow, or a drill down story. The
-    narrative visualization should be built with scenes, annotations, parameters,
-    and triggers. The scenes should follow a template for visual consistency,
-    follow an order to best convey the message, and the essay should also discuss
-    the layout and any visual structure in these scenes. The annotations should
-    follow a template for visual consistency, should highlight specific data items
-    or trends, and the essay should indicate when they are cleared. The parameters
-    should be identified in the essay, which should also discuss the states of the
-    narrative visualization. The triggers should also be identified in the essay,
-    in terms of the events and the parameter changes they trigger. User interface
-    events should be listed, along with a description of how possible user events
-    are communicated to the viewer.
-  </p>
-  <p>
-    The opening scene should include a button, labeled “About the Visualization,”
-    that presents an essay as described above that addresses the following points
-    of the rubric for this assignment.
+    This narrative visualization follows a martini glass hybrid structure for interactive storytelling.  It uses scenes, annotations, parameters, and triggers to tell the story and is implemented on the publicly visible website, GitHub.  The HTML, CSS, and JavaScript using D3 can be found at the <a href = "https://github.com/mlsayers/ChicagoHomicideTrends/">GitHub Repository</a>. To view the visualization, use the <a href = "https://htmlpreview.github.io/?https://github.com/mlsayers/ChicagoHomicideTrends/blob/master/index.html/">GitHub Preview Page</a>. Data was obtained from the <a href = "https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2/">Chicago Data Portal</a>.
   </p>
 
-  <h2>Does the narrative visualization correctly follow the hybrid structure as stated by the essay?</h2>
+  <h3>Martini Glass Structure</h2>
   <p>
-    The narrative visualization correctly follows the hybrid structure stated in
-    the essay.
-  </p>
-  <p>
-    The narrative visualization follows a different structure than is stated in
-    the essay, or the essay does not state the structure.
-  </p>
-  <p>
-    The narrative visualization is not properly deployed, and it is difficult to
-    utilize at least one of the key components. The narrative visualization is
-    not properly deployed, and is missing at least one key component (e.g., the
-    reader-led exploration at the end of a martini glass structure).
+    The martini glass hybrid structure is followed in this narrative visualization.  The first four scenes direct the reader's attention using annoations and changes in the bar chart to highlight important points about the number and location of reported homicides.  There is no interacivity in these first four scenes.  The reader is only able to transition through scenes following the story.  The fifth scene allows the reader to explore the dataset and visualization further on their own.  The radio buttons that appear to the right of the chart in scene 5 allow the reader to explore the dataset.  These buttons allow the reader to change the stacked and grouped bar layout as well as change the y axis to better see trends in homicide locations over time.  In this last scene, the reader is able to explore further than scenes 1-4.
   </p>
 
-  <h2>Does the narrative visualization effectively utilize scenes?</h2>
+  <h3>Scenes</h2>
   <p>
-    The essay properly discusses the layout and design of the scenes of the narrative visualization.
+    There are five scenes in the visualization that follow an order in conveying a message.  The scenes are navigated by selecting the numbers 1-5 at the top of the chart below the word "Scenes."  Numbers are used to cue the reader that the scenes are navigated in a linear order.
+   </p>
+   <p>
+     The scenes follow a template for visual consistency.  This template is a bar chart with the title, x-axis, and colors remaining the same as scenes are changed.  D3 transitions between scenes allow the reader to see the bars changing and keep the reader oriented.
+   </p>
+
+  <h3>Annotations</h2>
+  <p>
+    The annotations used in the narrative visualization follow a template for visual consistency.  The font and size of the annotation text stays the same as the reader transitions through the scenes.  All the annotations use transitions to keep their appearance less harsh to the reader.
   </p>
   <p>
-    The essay does not discuss the scenes of the narrative visualization adequately
-    enough to determine appropriate application of layout and structure.
+    In scene 1, annotations are used to highlight trends in the total number of homicides in Chicago over time.  The annotation to the lower left labeled "Drop in Numbers" indicates a drop in the total number of homicides from 2002 to 2004 that lasted for over a decade.  The location of the annotation is next to the change occurs to orient the reader's eyes to where the drop occurred.  The annotation in the upper right labeled "Rise in Numbers" indicates a rise in the total number of homicides in 2016.  The location of the annotation is again next to where the change occurs to orient the reader.  The annotations appear when scene 1 is selected and disappear when any other scene is selected.  They disappear to allow the reader to transition from total numbers in scene 1 to specific locations in scene 2.
   </p>
   <p>
-    The essay does not discuss the scenes of the narrative visualization, or the
-    scenes are not all based on the same template. The scenes are not properly
-    ordered. One or more scenes is incomplete.
+    In scene 2, one annotation is used to highlight the locations where homicides occurred that affected the total number of homicides the most.  The title "Street Violence" is used to cue the reader that the street location had a big impact.  In most cases, the bars for the street location are twice as tall as the next highest bar making them stand out to the reader.  The street location bars not only stand out because of their size but they are also the closest bars to the annotation orienting the reader to them.  The annotation is centered at the top of the chart as the reader is meant to scan across the top of the highest bars (street).  This annotation also notifies the reader of what to look for in the next two scenes (3 and 4).  The reader will see that while residence and auto homicides increase in 2016, these rises are still below 2001-2003 numbers.  The annotation ends by leaving the reader with a major takeaway about street violence.  The annotation on this scene appears when scene 2 is selected and disappears when any other scene is selected.  It disappears to clear the chart of extra wording so the reader can focus on the change in the y axis.  This allows the reader to follow the trends in residence homicides on scene 3 and auto homicides on scene 4.
+  </p>
+  <p>
+    In scene 5, one annotation is used to orient the reader to the interactivity of the last scene in the martini glass structure.  This annotation informs the reader that there are now radio buttons to the right of the chart that allow the reader to explore the dataset further.  This annotation is cleared as the reader changes radio buttons so the text does not distract nor get in the way of exploration.
   </p>
 
-  <h2>Does the narrative visualization effectively utilize annotations?</h2>
+  <h3>Parameters</h2>
   <p>
-    The essay properly discusses the application of the annotations of the narrative
-    visualization.
-  </p>
-  <p>
-    The essay does not discuss the annotations of the narrative visualization
-    adequately enough to determine when and why they are cleared between scenes,
-    how they highlight data, or what template they follow.
-  </p>
-  <p>
-    The essay does not discuss the annotations of the narrative visualization, or
-    the annotations do not follow the same template. The annotations are not
-    properly applied. One or more annotations is incomplete.
+    Parameters in the visualization change as the reader navigates through the scenes.  From scene 1 to scene 2, the chart changes from a stacked bar chart to a grouped bar chart.  In addition the y axis changes from the maximum value of the stacked bar chart to the maximum value of the grouped bar chart.  From scene 2 to scene 3, the y axis changes from the maximum number of annual street homicides to the maximum number of annual residence homicides. From scene 3 to scene 4, the y axis changes from maximum annual residence to auto homicides.  From scene 4 to scene 5, the y axis changes from the maximum annual auto homicides back to the maximum value of the stacked bar chart.  The chart also changes back from a grouped to a stacked bar chart.
+
+    In scene 5 radio buttons appear to the right of the chart that were hidden up to this point.  The parameters that change between radio button clicks are similar the the parameters that changed from scenes 1-4.  The chart changes from stacked to grouped, and the y axis changes to zoom the reader to different homicide locations.
   </p>
 
-  <h2>Does the narrative visualization effectively utilize parameters?</h2>
+  <h3>Triggers</h2>
   <p>
-    The essay properly discusses the parameters of the narrative visualization,
-    including describing which parameters control the current state of the narrative visualization.
-  </p>
-  <p>
-    The essay does not discuss the parameters of the narrative visualization
-    adequately enough to determine appropriate use.
-  </p>
-  <p>
-    There are errors in the narrative visualization due to the incorrect use of
-    parameters. The narrative visualization is incomplete due to incomplete use
-    of parameters.
+    Triggers are used to change scenes and their associated parameters in the visualization.  At the top of the visualization, the reader clicks on the scene number to change scenes.  The word "Scenes" is written above the scene numbers as an indicator to the reader that the visualization is interactive.  Scenes is a commonly used word to indicate there is a change in what you will see.  The active scene number is highlighted dark green and the other numbers will highlight a light green when hovered over with the mouse to indicate they can be clicked.  In scene 5, an annotation appears telling the reader that radio buttons are available to the right of the chart for further interactivity.  Radio buttons are a commonly used item indicating that only one item can be clicked at a time and that they are activated by clicking on the radio button circle.  The reader has learned what to expect from the radio buttons as they perform the same types of actions that the reader has learned in scenes 1-4.  They can use the radio buttons to change from stacked to grouped and change the y axis to get a more detailed look at different locations.
   </p>
 
-
-  <h2>Does the narrative visualization effectively utilize triggers?</h2>
-  <p>
-    The essay properly discusses the triggers, including what user events trigger
-    what parameter value changes, and how the viewer is aware of available user events.
-  </p>
-  <p>
-    The essay does not discuss the triggers adequately enough to determine the
-    connection between user events and parameter value changes, or adequately
-    enough to determine how available user events are communicated to the viewer.
-  </p>
-  <p>
-    The essay does not discuss the triggers of the narrative visualization, or the
-    available user events are not adequately communicated to the viewer.
-  </p>
-  <p>
-    The triggers are not properly applied (e.g., a user event does not create the
-    expected result). One or more triggers is incomplete.
-  </p>
 </body></html>
