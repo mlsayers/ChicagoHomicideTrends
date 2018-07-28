@@ -51,7 +51,15 @@ d3.csv("data.csv", function(d, i, columns) {
       .attr("height", function(d) { return y(d[0]) - y(d[1]); })
       .attr("width", x.bandwidth())
       .attr("stroke", "black")
-      .attr("stroke-width", "1");
+      .attr("stroke-width", "1")
+      .on("mouseover", function() { tooltip.style("display", null); })
+      .on("mouseout", function() { tooltip.style("display", "none"); })
+      .on("mousemove", function(d) {
+        var xPos = d3.mouse(this)[0] + 30;
+        var yPos = d3.mouse(this)[1] - 5;
+        tooltip.attr("transform", "translate(" + xPos + "," + yPos + ")");
+        tooltip.select("text").text(d[1]-d[0]);
+      });
 
   rect = g.selectAll("rect");
 
@@ -218,7 +226,7 @@ function transitionScene2() {
       .attr("width", x.bandwidth() / 7)
   .transition()
     .attr("height", function(d) { return y(0) - y(d[1] - d[0]); })
-      .attr("y", function(d) { return y(d[1] - d[0]); });
+    .attr("y", function(d) { return y(d[1] - d[0]); });
 
   d3.select("#step2-annotation")
     .transition().delay(1600).duration(500)
@@ -496,3 +504,20 @@ function transitionScene5Zoom6() {
     .attr("height", function(d) { return y(0) - y(d[1] - d[0]); })
       .attr("y", function(d) { return y(d[1] - d[0]); });
 }
+
+var tooltip = svg.append("g")
+  .attr("class", "tooltip")
+  .style("display", "none");
+
+tooltip.append("rect")
+  .attr("width", 30)
+  .attr("height", 20)
+  .attr("fill", "white")
+  .style("opacity", 0.9);
+
+tooltip.append("text")
+  .attr("x", 15)
+  .attr("dy", "1.2em")
+  .style("text-anchor", "middle")
+  .attr("font-size", "12px")
+  .attr("font-weight", "bold");

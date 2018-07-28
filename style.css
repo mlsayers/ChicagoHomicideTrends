@@ -21,6 +21,7 @@ body {
   left: 820px;
   top: 175px;
   width: 180px;
+  z-index: 100;
 }
 
 label {
@@ -69,7 +70,6 @@ label {
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: -10;
 }
 
 .annotation-step {
@@ -103,8 +103,8 @@ label {
 }
 
 #step5-center-annotation {
-  left: 280px;
-  top: 50px;
-  width: 300px;
+  left: 230px;
+  top: 30px;
+  width: 400px;
   text-align: center;
 }
